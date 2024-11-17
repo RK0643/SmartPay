@@ -1,0 +1,217 @@
+.body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/resources/images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.vid-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bgvid.back {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.inner {
+    position: absolute;
+}
+.inner-container-login {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    overflow: hidden;
+}
+.inner-container {
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    overflow: hidden;
+}
+
+.bgvid.inner {
+    top: calc(-50vh + 200px);
+    left: calc(-50vw + 200px);
+    filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+    -webkit-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.13);
+    padding:2px 0px;
+}
+
+.box h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 35px;
+    color: #ffffff;
+
+}
+
+.box input {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.13);
+    border: 0;
+}
+
+.box input:focus, .box input:active, .box button:focus, .box button:active {
+    outline: none;
+}
+
+.box button {
+    background: darkblue;
+    border: 0;
+    color: White;
+    padding: 10px;
+    font-size: 20px;
+    width: 330px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.box button:active {
+    background: cyan;
+}
+
+.box p {
+    font-size: 16px;
+    text-align: center;
+    color: white !important; /* Change this to your desired text color */
+}
+
+.box p span {
+    cursor: pointer;
+    color: darkcyan;
+}
+
+/* Style all input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+.box button[type="submit"] {
+    background: darkblue;
+    border: 0;
+    color: white !important;; /* Change text color to white */
+    padding: 10px;
+    font-size: 20px;
+    width: 330px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Style the container for inputs */
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border : 1px solid rosybrown;
+}
+
+#message p {
+    padding: 10px 30px;
+    font-size: 18px;
+    text-decoration-color: white;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+td {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 12px;
+    border: 1px solid #007bff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: darkblue;
+}

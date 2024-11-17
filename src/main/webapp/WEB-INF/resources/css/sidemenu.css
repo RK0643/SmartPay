@@ -1,0 +1,407 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "sans-serif", sans-serif;
+}
+body {
+    background-color: whitesmoke;
+}
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: relative;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.sidebar {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.head {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.user-details .title,
+.menu .title {
+    font-size: 10px;
+    font-weight: 500;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.user-details .name {
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+}
+.nav {
+    flex: 1;
+}
+.menu ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.menu ul li a img {
+    width: 20px; /* Adjust the width of the image */
+    height: 20px; /* Adjust the height of the image */
+    margin-right: 10px; /* Add some spacing between the image and the text */
+}
+
+.menu ul li a .text {
+    font-size: 16px; /* Adjust the font size of the menu text */
+    /* Add any other desired CSS properties */
+}
+.menu ul li > a:hover,
+.menu ul li.active > a {
+    color: deepskyblue;
+    background-color: #f6f6f6;
+}
+.menu ul li .icon {
+    font-size: 20px;
+}
+.menu ul li .text {
+    flex: 1;
+}
+.menu ul li .arrow {
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.menu ul li.active .arrow {
+    transform: rotate(180deg);
+}
+.menu .sub-menu {
+    display: none;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-left: 1px solid #f6f6f6;
+}
+.menu .sub-menu li a {
+    padding: 10px 8px;
+    font-size: 12px;
+}
+.menu:not(:last-child) {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f6f6f6;
+}
+.menu-btn {
+    position: absolute;
+    right: -14px;
+    top: 3.5%;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #757575;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+}
+.menu-btn:hover i {
+    color: #000;
+}
+.menu-btn i {
+    transition: all 0.3s;
+}
+.sidebar.active {
+    width: 92px;
+}
+.sidebar.active .menu-btn i {
+    transform: rotate(180deg);
+}
+.sidebar.active .user-details {
+    display: none;
+}
+.sidebar.active .menu .title {
+    text-align: center;
+}
+.sidebar.active .menu ul li .arrow {
+    display: none;
+}
+.sidebar.active .menu > ul > li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar.active .menu > ul > li > a .text {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.sidebar.active .menu > ul > li > a .text::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 20%;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.sidebar.active .menu > ul > li > a:hover .text {
+    left: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar.active .menu .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #f6f6f6;
+    background-color: #fff;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+.mainpage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    justify-content: center;
+}
+.top-bar {
+    padding-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Blue background line */
+.blue-background {
+    height: 100px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #00008b;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.blue-background p {
+    color: white;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Added some gap for better visuals */
+    background-color: floralwhite;
+    border-radius: 5px;
+    padding: 10px; /* Added padding for better spacing */
+
+}
+
+/* Grid item */
+.grid-item {
+    text-align: center;
+    padding: 10px;
+    background-color: floralwhite;
+    border-radius: 5px; /* Adjusted border-radius */
+    border: #007bff;
+}
+.grid-item p {
+    margin-top: 10px; /* Space between image and text */
+}
+
+/* Common button styles */
+.btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden; /* Ensures image is contained within the button */
+    padding: 0; /* Ensure no padding inside the button */
+}
+.btn img {
+    width: 100%; /* Make image fill the button */
+    height: 100%; /* Make image fill the button */
+    object-fit: cover; /* Ensure the image covers the button area */
+    /*border-radius: 50%; !* Make the image round *!*/
+    transition: filter 0.3s; /* Smooth transition for filter effect */
+}
+.btn:hover {
+    background-color: lightblue; /* Change background color on hover */
+}
+.btn:hover img {
+    filter: invert(1); /* Invert image colors on hover */
+}
+.slidetext {
+    font-size: 50px;
+    text-align: left;
+    position: absolute; /*places text on top of image instead of next to it (relative)*/
+    width: 40%;
+    color: white;
+}
+
+.slider {
+    overflow: hidden; /*prevents text overflowing boundaries*/
+    height: 500px;
+    width: 800px;
+    border: 3px solid black;
+    margin: auto; /*centres slide show*/
+    margin-top: 20px;
+    outline: 0px solid red;
+}
+
+.slider figure div {
+    width: 20%;
+    float: left; /*puts images in a line*/
+}
+
+.slider figure img {
+    width: 100%; /* i.e. 100% of it's parent div (above) which is 20% of the containing div 'slider'*/
+    float: left; /*need to do this for imgs & divs within figure*/
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0; /*to start images at the very left of the page*/
+    animation: 40s slidy infinite; /*can call animation anything, I have used 'slidy'*/
+}
+
+/*now make the animation*/
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+    10% {
+        left: 0%;
+    }
+    12% {
+        left: -100%; /*from 10% to 12%, i.e. 2% of the total animation time, is the speed of the transition from one slide to the next. left:-100% means move the image left by 100% of it's total length which is 500%*/
+    }
+    22% {
+        left: -100%; /*from 12% to 22%, i.e. 10% of the total animation time, is how long the slide stays on screen before moving to the next*/
+    }
+    24% {
+        left: -200%;
+    }
+    34% {
+        left: -200%;
+    }
+    36% {
+        left: -300%;
+    }
+    46% {
+        left: -300%;
+    }
+    48% {
+        left: -400%;
+    }
+    58% {
+        left: -400%;
+    }
+    60% {
+        left: -300%;
+    }
+    70% {
+        left: -300%;
+    }
+    72% {
+        left: -200%;
+    }
+    82% {
+        left: -200%;
+    }
+    84% {
+        left: -100%;
+    }
+    94% {
+        left: -100%;
+    }
+    96% {
+        left: 0%;
+    }
+}
